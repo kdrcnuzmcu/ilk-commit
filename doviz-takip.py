@@ -76,7 +76,8 @@ class Arayuz(QtWidgets.QWidget):
         self.show()
         
     def veriAl(self):
-        url="http://data.fixer.io/api/latest?access_key=eaa83080789013171157063c91eb4565&format=1"
+        # url="http://data.fixer.io/api/latest?access_key=eaa83080789013171157063c91eb4565&format=1"
+        url = " { JSON DATAS }
         r=requests.get(url)
         j=r.json()
         zaman=j["timestamp"]
@@ -99,10 +100,10 @@ class Arayuz(QtWidgets.QWidget):
     def epostaGonder(self):
         if self.dovizDurum:
             mesaj=MIMEMultipart()
-            mesaj["From"]=" E-MAIL "
+            mesaj["From"]=" {E-MAIL} "
             mesaj["To"]=self.adres.text()
             
-            mesaj["Subject"]="DENEME MESAJI"
+            mesaj["Subject"]=" {E-MAIL SUBJECT} "
             icerik=self.epostaIcerik.toPlainText()
             mesaj_govdesi=MIMEText(icerik,"plain")
             mesaj.attach(mesaj_govdesi)
@@ -110,7 +111,7 @@ class Arayuz(QtWidgets.QWidget):
                 mail=smtplib.SMTP("smtp.gmail.com",587)
                 mail.ehlo()
                 mail.starttls()
-                mail.login(" E-MAIL ", " PASSWORD ")
+                mail.login(" {E-MAIL} ", " {PASSWORD} ")
                 mail.sendmail(mesaj["From"],mesaj["To"],mesaj.as_string())
                 mail.close()
             except:
