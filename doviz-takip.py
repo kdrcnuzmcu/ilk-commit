@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jan 27 20:04:06 2022
-
-@author: kdrcn
-"""
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
@@ -131,24 +125,3 @@ class Arayuz(QtWidgets.QWidget):
 app = QtWidgets.QApplication(sys.argv)
 uygulama=Arayuz()
 sys.exit(app.exec_())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
