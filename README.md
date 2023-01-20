@@ -1,1 +1,1 @@
-"# Günlük verilerini e-posta yoluyla gönderir." 
+# Günlük verilerini e-posta yoluyla gönderir.
