@@ -1,1 +1,1 @@
-"# Gnlk d”viz verilerini e-posta yoluyla g”nderir." 
+"# GÃ¼nlÃ¼k verilerini e-posta yoluyla gÃ¶nderir." 
